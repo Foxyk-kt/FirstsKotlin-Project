@@ -1,2 +1,1 @@
-"# Мой первый проект" 
-"Привет, GitHub!" 
+First Project ha ha ha
