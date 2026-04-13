@@ -1,1 +1,1 @@
-First Project ha ha ha
+My first project is a calculator ha ha ha
