@@ -203,6 +203,7 @@ class Calculator : ComponentActivity() {
                         .padding(top = 6.dp, end = 6.dp)
                 ) {
                     row.forEach { text ->
+
                         if(text in listOf("AC", "<", "%", "/", "*", "-", "+", "=", "+/-")) {
                             BtnO(text) {handleClick(it)}
                         }else
