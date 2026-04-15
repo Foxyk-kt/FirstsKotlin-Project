@@ -63,6 +63,14 @@ class Calculator : ComponentActivity() {
         var textOut by remember { mutableStateOf("") }
         var Debug by remember { mutableStateOf(false) }
         val debugList = remember { mutableStateListOf("") }
+        val buttons = listOf(
+            listOf("AC", "<", "%", "/"),
+            listOf("7", "8", "9", "*"),
+            listOf("4", "5", "6", "-"),
+            listOf("1", "2", "3", "+"),
+            listOf("+/-", "0", ".", "=")
+
+    )
 
 //--------------------------------Logic--------------------------------
         fun handleClick(value: String) {
@@ -131,6 +139,7 @@ class Calculator : ComponentActivity() {
 //--------------------------------Design--------------------------------
         Column(
             horizontalAlignment = Alignment.End,
+            verticalArrangement = Arrangement.Bottom,
             modifier = modifier
                 .fillMaxWidth()
         ) {
@@ -183,20 +192,7 @@ class Calculator : ComponentActivity() {
 
 
             )
-        }
 //--------------------------------Buttons--------------------------------
-        val buttons = listOf(
-            listOf("AC", "<", "%", "/"),
-            listOf("7", "8", "9", "*"),
-            listOf("4", "5", "6", "-"),
-            listOf("1", "2", "3", "+"),
-            listOf("+/-", "0", ".", "=")
-
-        )
-        Column(
-            modifier = modifier
-                .fillMaxWidth()
-        ) {
             buttons.forEach { row ->
                 Row(
                     horizontalArrangement = Arrangement.SpaceEvenly,
@@ -213,7 +209,6 @@ class Calculator : ComponentActivity() {
                 }
             }
         }
-
     }
     //--------------------------------ButtonDef--------------------------------
     @Composable
@@ -250,7 +245,7 @@ class Calculator : ComponentActivity() {
             Text(
                 text = text,
                 fontWeight = FontWeight.Bold,
-                fontSize = 22.sp,
+                fontSize = 20.sp,
                 color = MyTextSpecialDark
             )
         }
