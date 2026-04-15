@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.calculator.Calculator
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.example.myapplication.ui.theme.MyApplicationTheme
+import com.calculator.Calculator.ui.theme.MyApplicationTheme
 import androidx.compose.runtime.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement
@@ -27,6 +27,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.draw.clip
+import com.calculator.Calculator.ui.theme.MyTextDark
+import com.calculator.Calculator.ui.theme.MyTextSpecialDark
 
 //--------------------------------Procents--------------------------------
 class Calculator : ComponentActivity() {
@@ -139,7 +141,7 @@ class Calculator : ComponentActivity() {
                     .height(16.dp),
                 shape = RoundedCornerShape(8.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF151515)
+                    containerColor = MaterialTheme.colorScheme.background
                 )
             ) {}
 
@@ -174,7 +176,7 @@ class Calculator : ComponentActivity() {
                 fontWeight = FontWeight.Bold,
                 fontSize = 42.sp,
                 textAlign = TextAlign.End,
-                color = Color.White,
+                color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 156.dp, end = 20.dp)
@@ -222,14 +224,14 @@ class Calculator : ComponentActivity() {
                 .size(80.dp),
             shape = RoundedCornerShape(16.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Black,
+                containerColor = MaterialTheme.colorScheme.surface
             )
         ) {
             Text(
                 text = text,
                 fontWeight = FontWeight.Bold,
                 fontSize = 20.sp,
-                color = Color.White,
+                color = MaterialTheme.colorScheme.onSurface
             )
         }
     }
@@ -242,14 +244,14 @@ class Calculator : ComponentActivity() {
                 .size(80.dp),
             shape = RoundedCornerShape(16.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Black,
+                containerColor = MaterialTheme.colorScheme.surface
             )
         ) {
             Text(
                 text = text,
                 fontWeight = FontWeight.Bold,
-                fontSize = 20.sp,
-                color = Color(255, 110, 0),
+                fontSize = 22.sp,
+                color = MyTextSpecialDark
             )
         }
     }
