@@ -29,6 +29,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.draw.clip
 import com.calculator.Calculator.ui.theme.MyTextSpecialDark
 
+
 //--------------------------------Procents--------------------------------
 class Calculator : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
